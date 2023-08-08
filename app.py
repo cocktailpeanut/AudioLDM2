@@ -25,7 +25,7 @@ def text2audio(
     if audioldm is None or model_name != current_model_name:
         audioldm = build_model(model_name=model_name)
         current_model_name = model_name
-        audioldm = torch.compile(audioldm)
+#        audioldm = torch.compile(audioldm)
 
     # print(text, length, guidance_scale)
     waveform = text_to_audio(
